@@ -1,0 +1,15 @@
+# synth.ys
+
+# Ativa o suporte a SystemVerilog
+read_verilog -sv kronecker.sv
+
+# Executa a síntese utilizando o pass básico
+synth -top DecimalParaBinarioVetor
+
+# Otimiza o circuito mapeado
+opt
+
+show -width -signed -format png -prefix kronecker
+
+# Exibe as estatísticas do circuito sintetizado
+stat
