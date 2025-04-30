@@ -1,15 +1,15 @@
 # synth.ys
 
 # Ativa o suporte a SystemVerilog
-read_verilog -sv half_adder.sv
+read_verilog -sv display7.sv
 
 # Executa a síntese utilizando o pass básico
-synth -top half_adder
+synth -top display7
 
 # Otimiza o circuito mapeado
 opt
 
-show -width -signed -format png -prefix half_adder
+show -width -signed -format png -prefix display7
 
 # Exibe as estatísticas do circuito sintetizado
 stat
